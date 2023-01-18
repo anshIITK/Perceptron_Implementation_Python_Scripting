@@ -10,12 +10,12 @@ def main(data, modelName, plotName, eta, epochs):
     ETA = 0.1
     EPOCHS = 10
 
-    model_AND = Perceptron(eta = eta, epochs = epochs)
-    model_AND.fit(X, y)
-    _= model_AND.total_loss()
+    model = Perceptron(eta = eta, epochs = epochs)
+    model.fit(X, y)
+    _= model.total_loss()
 
-    model_AND.save(filename = modelName, model_dir="model")
-    save_plot(df_AND, model_AND, filename=plotName)
+    model.save(filename = modelName, model_dir="model")
+    save_plot(df_AND, model, filename=plotName)
 
 if __name__ == "__main__":
 
