@@ -28,16 +28,3 @@ if __name__ == "__main__":
     ETA = 0.3
     EPOCHS = 10
     main(data=OR, modelName="or.pkl", plotName="or.png", eta=ETA, epochs=EPOCHS)
-
-df_OR = pd.DataFrame(OR)
-
-X, y = prepare_data(df_OR)
-ETA = 0.1
-EPOCHS = 10
-
-model_OR = Perceptron(eta = ETA, epochs = EPOCHS)
-model_OR.fit(X, y)
-_= model_OR.total_loss()
-
-model_OR.save(filename = "or.pkl", model_dir="model_or")
-save_plot(df_OR, model_OR, filename="or.png")
