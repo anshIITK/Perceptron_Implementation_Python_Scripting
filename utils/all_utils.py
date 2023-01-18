@@ -1,7 +1,8 @@
-import matplotlib.pyplot as plt
-from matplotlib.colors import ListedColormap
 import os
 import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.colors import ListedColormap
+
 
 def prepare_data(df, target_col="y"):
   X = df.drop(target_col, axis=1)
